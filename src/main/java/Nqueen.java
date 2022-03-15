@@ -54,20 +54,24 @@ public class Nqueen {
             return true;
         }
 
-            /* Place 1 queen */
+        /* Place 1 queen */
         if (col == 0) {
-            System.out.println("\nAt the first column "
-                    + "\nEnter the number of the row that you want to place the queen "
-                    + "\nFrom 1 to 8\n");
+            System.out.println("""
+                               
+                               At the first column 
+                               Enter the number of the row that you want to place the queen 
+                               From 1 to 8
+                               """);
             int x = input.nextInt();
             x--;
             if (isSafe(board, x, col)) {
 
                 board[x][0] = 1 ;
-                printSolution(board);
+               
 
                 if (solveNQUtil(board, col + 1) == true) {
                     return true;
+
                 }
 
                 board[x][col] = 0;
@@ -76,9 +80,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 2 queen */
+       /* *//* Place 2 queen *//*
         if (col == 1) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the second column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -98,9 +102,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 3 queen */
+        *//* Place 3 queen *//*
         if (col == 2) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the third column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -120,9 +124,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 4 queen */
+        *//* Place 4 queen *//*
         if (col == 3) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the forth column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -142,9 +146,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 5 queen */
+        *//* Place 5 queen *//*
         if (col == 4) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the fifth column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -164,9 +168,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 6 queen */
+        *//* Place 6 queen *//*
         if (col == 5) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the sixth column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -186,9 +190,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 7 queen */
+        *//* Place 7 queen *//*
         if (col == 6) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the seventh column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -208,9 +212,9 @@ public class Nqueen {
             return false;
         }
 
-        /* Place 8 queen */
+        *//* Place 8 queen *//*
         if (col == 7) {
-            System.out.println("\nAt the first column "
+            System.out.println("\nAt the eight column "
                     + "\nEnter the number of the row that you want to place the queen "
                     + "\nFrom 1 to 8\n");
             int x = input.nextInt();
@@ -228,7 +232,7 @@ public class Nqueen {
             }
 
             return false;
-        }
+        }*/
 
         /* place rest of the queens */
         for (int i = 0; i < N; i++) {
@@ -244,15 +248,13 @@ public class Nqueen {
                 board[i][col] = 0;
             }
         }
-
-        /* If the queen can not be placed in any row in 
-           this colum col, then return false */
         return false;
     }
 
     boolean solveNQ() {
         int board[][]
-                = {{0, 0, 0, 0, 0, 0, 0, 0},
+                = {
+                {0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0},
